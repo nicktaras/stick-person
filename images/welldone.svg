@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 400 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1.02552,0,0,1.02552,-362.485,-855.767)">
+        <g transform="matrix(1,0,0,1,476.827,772.785)">
+            <text x="-34.327px" y="99.039px" style="font-family:'Avenir-Book', 'Avenir';font-size:36px;">WELL DONE!</text>
+        </g>
+        <g transform="matrix(1.38289,0,0,1,144.316,477.651)">
+            <path d="M216.898,412.084L372.807,412.084" style="fill:none;stroke:rgb(0,162,128);stroke-width:4.85px;"/>
+        </g>
+        <g transform="matrix(0.440167,0,0,0.440167,255.614,565.709)">
+            <path d="M290.35,612.009L305.28,657.96L353.596,657.96L314.507,686.359L329.438,732.31L290.35,703.911L251.262,732.31L266.192,686.359L227.104,657.96L275.419,657.96L290.35,612.009Z" style="fill:rgb(0,162,128);"/>
+        </g>
+        <g transform="matrix(0.440167,0,0,0.440167,585.614,565.709)">
+            <path d="M290.35,612.009L305.28,657.96L353.596,657.96L314.507,686.359L329.438,732.31L290.35,703.911L251.262,732.31L266.192,686.359L227.104,657.96L275.419,657.96L290.35,612.009Z" style="fill:rgb(0,162,128);"/>
+        </g>
+    </g>
+</svg>
