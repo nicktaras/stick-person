@@ -1,12 +1,11 @@
-var positionStateStore = require('./moves');
 var canvas = this.__canvas = new fabric.Canvas('c', { selection: false, backgroundColor : "white" } );
 fabric.Object.prototype.originX = fabric.Object.prototype.originY = 'center';
 
 // for MVP only.
 // Turn off when adding new moves
 // then back on when recording - sorry :) 
-var offsetX = 20;
-var offsetY = 40;
+var offsetX = 67;
+var offsetY = 35;
 var fillColor = 'white';
 var lineColor = 'black';
 
@@ -121,33 +120,31 @@ canvas.on('object:moving', function(e) {
 });
 
 // Well done SVG - Show when exporting celebration
-var cSize = 550;
-var welldoneImgURL = 'welldone.svg';
+var cSize = 640;
+var welldoneImgURL = 'images/welldone.svg';
 var welldoneImg = new Image();
 welldoneImg.onload = function (img) {    
     var welldone = new fabric.Image(welldoneImg, {
         angle: 0,
-        width: 1800,
-        height: 550,
-        left: cSize / 2 + 50,
-        top: 470,
+        width: 1000,
+        left: cSize / 2,
+        top: 440,
         scaleX: .15,
         scaleY: .15
     });
-    // canvas.add(welldone);
+    canvas.add(welldone);
 };
 welldoneImg.src = welldoneImgURL;
 
 // logo
-var imgURL = 'logo.svg';
+var imgURL = 'images/logo.svg';
 var logoImg = new Image();
 logoImg.onload = function (img) {    
     var logo = new fabric.Image(logoImg, {
         angle: 0,
-        width: 1800,
-        height: 550,
-        left: cSize / 2 + 27,
-        top: 60,
+        width: 1000,
+        left: cSize / 2,
+        top: 50,
         scaleX: .08,
         scaleY: .08
     });
@@ -324,25 +321,25 @@ function ani(state) {
 // Medium - Arm Higher
 // Hard - Jump upside down one hand
 
-setTimeout(() => {
-  startRecording();
-  ani('HEEL_DOWN_CALF_STRETCH_RIGHT'); 
-}, 100);
-setTimeout(() => {
-  ani('KARATEKID'); 
-}, 1700);
-setTimeout(() => {
-  ani('EXERCISE_LEVEL_HARD'); 
-}, 2800);
-setTimeout(() => {
-  ani('COLLAPSED'); 
-}, 4800);
-setTimeout(() => {
-  ani('LAY_POSING'); 
-}, 6000);
-setTimeout(() => {
-  stopRecording();
-}, 8000);
+// setTimeout(() => {
+//   startRecording();
+//   ani('HEEL_DOWN_CALF_STRETCH_RIGHT'); 
+// }, 100);
+// setTimeout(() => {
+//   ani('KARATEKID'); 
+// }, 1700);
+// setTimeout(() => {
+//   ani('EXERCISE_LEVEL_HARD'); 
+// }, 2800);
+// setTimeout(() => {
+//   ani('COLLAPSED'); 
+// }, 4800);
+// setTimeout(() => {
+//   ani('LAY_POSING'); 
+// }, 6000);
+// setTimeout(() => {
+//   stopRecording();
+// }, 8000);
 
 // AWESOME
 // setTimeout(() => {

@@ -1,4 +1,4 @@
-exports.positionStateStore = {
+var positionStateStore = {
   ALL: [
     "LUNGING_HIP_FLEXER",
     "STANDING_QUAD_STRETCH",

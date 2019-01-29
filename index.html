@@ -9,45 +9,49 @@
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
+  <script src="moves.js"></script>
+  <script src="coordinateTemplate.js"></script>
   <script src="node_modules/fabric/dist/fabric.js"></script>
   <script src="node_modules/file-saver/dist/FileSaver.min.js"></script>
   <script src="node_modules/canvas-toBlob/canvas-toBlob.js"></script>
 </head>
 <body>
-  <div style="padding: 20px; float: right; margin: 50px; position: relative; z-index: 100;">
-    <p>Coords:</p>
-    <p><b>Head:</b><span id="headCircle"></span></p>
-    <p><b>Shoulders:</b> <span id="shoulderCircle"></span></p>
-    <p><b>Hips:</b> <span id="hipsCircle"></span></p>
-    <p><b>Left Elbow:</b> <span id="leftElbowCircle"></span></p>
-    <p><b>Right Elbow:</b> <span id="rightElbowCircle"></span></p>
-    <p><b>Right Hand:</b> <span id="rightHandCircle"></span></p>
-    <p><b>Left Hand:</b> <span id="leftHandCircle"></span></p>
-    <p><b>Left Knee:</b> <span id="leftKneeCircle"></span></p>
-    <p><b>Right Knee:</b> <span id="rightKneeCircle"></span></p>
-    <p><b>Left Foot:</b> <span id="leftFootCircle"></span></p>
-    <p><b>Left Ankle:</b> <span id="leftAnkleCircle"></span></p>
-    <p><b>Right Foot:</b> <span id="rightFootCircle"></span></p>
-    <p><b>Right Ankle:</b> <span id="rightAnkleCircle"></span></p>
-    <button onClick="exportData()">Export Data</button>
+
+  <script>
+    document.body.innerHTML += coordinateTemplate;
+  </script>
+
+  <canvas 
+    style="border: 1px solid black; float: left;"
+    id="c" 
+    width="640px" 
+    height="480px">
+  </canvas>
   </div>
-  <canvas id="c" width="640px" height="480px"></canvas>
-  <!--
-    old canvas size:  
-    <canvas id="c" width="550px" height="550px"></canvas> 
-  -->
+
+  <div style="background: #00a37f; align-items: center; width: 640px; border: 1px solid black; display: flex; justify-content: space-evenly;">
+    <button style="background: white; border-radius: 20px; height: 30px; padding: 0 15px;" id="record">Start Recording</button>
+    <button style="background: white; border-radius: 20px;height: 30px; padding: 0 15px;" id="play">Play</button>
+    <button style="background: white; border-radius: 20px; height: 30px; padding: 0 15px;" id="download">Download</button>
+    <audio 
+      style="height: 30px; margin: 10px; position: relative;"
+      preload 
+      controls 
+      autoplay 
+      id="ac">
+      <source src="audio/level.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <video 
+    id="recorded" 
+    playsinline 
+    loop>
+  </video>
+
   <script src="main.js"></script>
-  <div>
-      <button id="record">Start Recording</button>
-      <button id="play">Play</button>
-      <button id="download">Download</button>
-  </div>
-  <audio preload controls autoplay id="ac">
-    <source src="audio/level.mp3" type="audio/mpeg">
-    Your browser does not support the audio tag.
-  </audio>
-  <video id="recorded" playsinline loop></video>
   <script src="rtc.js"></script>
   <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+
 </body>
 </html>

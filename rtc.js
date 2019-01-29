@@ -57,9 +57,6 @@ function toggleRecording() {
     startRecording();
   } else {
     stopRecording();
-    recordButton.textContent = 'Start Recording';
-    playButton.disabled = false;
-    downloadButton.disabled = false;
   }
 }
 
@@ -102,6 +99,9 @@ function stopRecording() {
   mediaRecorder.stop();
   console.log('Recorded Blobs: ', recordedBlobs);
   video.controls = true;
+  recordButton.textContent = 'Start Recording';
+  playButton.disabled = false;
+  downloadButton.disabled = false;
 }
 
 function play() {
