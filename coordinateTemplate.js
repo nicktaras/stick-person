@@ -1,5 +1,5 @@
 
-var coordinateTemplate = `<div style="float: left; border: 1px solid black; font-size: 10.4pt; padding: 20px; float: right; margin: 0px; position: relative; z-index: 100;">
+var coordinateTemplate = `<div id="coords" style="float: left; border: 1px solid black; font-size: 10.4pt; padding: 20px; float: right; margin: 0px; position: relative; z-index: 100;">
     <span>Coords:</span>
     <p><b>Head:</b><span id="headCircle"></span></p>
     <p><b>Shoulders:</b> <span id="shoulderCircle"></span></p>
